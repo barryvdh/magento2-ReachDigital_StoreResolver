@@ -64,11 +64,7 @@ class FixSeoUrlParsing
             return false;
         }
 
-        if (AppAreaListPlugin::getModifiedOriginalPathInfo()) {
-            $identifier = ltrim(AppAreaListPlugin::getModifiedOriginalPathInfo(), '/');
-        } else {
-            $identifier = ltrim($request->getOriginalPathInfo(), '/');
-        }
+        $identifier = ltrim($request->getOriginalPathInfo(), '/');
         if (!empty($identifier)) {
             foreach (self::SKIP_REQUEST_IDENTIFIERS as $skipRequestIdentifier) {
                 if (strpos($identifier, $skipRequestIdentifier) === 0) {
