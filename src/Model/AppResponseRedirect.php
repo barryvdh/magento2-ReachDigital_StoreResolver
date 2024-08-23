@@ -33,7 +33,7 @@ class AppResponseRedirect extends \Magento\Store\App\Response\Redirect
         \Magento\Framework\Session\SidResolverInterface $sidResolver,
         \Magento\Framework\UrlInterface $urlBuilder,
         \Ho\StoreResolver\Model\StoreResolver $storeResolver,
-        \Zend\Uri\Uri $uri = null,
+        \Laminas\Uri\Uri $uri = null,
         $canUseSessionIdInParam = true
     )
     {
